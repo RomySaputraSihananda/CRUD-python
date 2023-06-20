@@ -6,7 +6,9 @@ def read():
             data = file.readlines();
             display(data);
     except Exception as err:
-        print(err);
+        header();
+        print(f'\n|{"---DATA KOSONG---":^48}|')
+        print('-' * 50);
 
 def header():
         print('-' * 50);

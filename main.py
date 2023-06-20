@@ -1,8 +1,7 @@
 from os import system
-from utils import menu, create, read, update, delete, init_console;
+from utils import menu, create, read, update, delete;
 
 if(__name__ == '__main__'):
-    init_console();
     while True:
         system('clear');
         menu();
