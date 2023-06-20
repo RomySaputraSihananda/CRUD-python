@@ -1,9 +1,10 @@
 from os import system
-from utils import menu, create, read, update, delete;
+from utils import menu, create, read, update, delete, init_console;
 
 if(__name__ == '__main__'):
+    init_console();
     while True:
-        system('cls');
+        system('clear');
         menu();
         
         option = int(input('Massukan opsi : '));
@@ -20,7 +21,7 @@ if(__name__ == '__main__'):
             case _:
                 print('salah blok......');
         
-        lanjut = input('Lanjut : ');
+        lanjut = input('\nLanjut : ');
         if((lanjut == 'n') or (lanjut == 'N')): break;
 
     print('tq');
