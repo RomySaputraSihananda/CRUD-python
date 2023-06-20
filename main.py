@@ -6,7 +6,7 @@ if(__name__ == '__main__'):
         system('clear');
         menu();
         
-        option = int(input('Massukan opsi : '));
+        option = int(input('Massukan Opsi : '));
 
         match(option):
             case 1:
@@ -20,7 +20,7 @@ if(__name__ == '__main__'):
             case _:
                 print('salah blok......');
         
-        lanjut = input('\nLanjut : ');
+        lanjut = input('\nLanjut Program : ');
         if((lanjut == 'n') or (lanjut == 'N')): break;
 
     print('tq');

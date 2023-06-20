@@ -1,10 +1,24 @@
 from . import Database;
 
-def read():
+def read(**kwargs):
     try:
         with open(Database.DB_NAME, 'r') as file:
             data = file.readlines();
-            display(data);
+            jumlah_data = len(data);
+            
+            if 'index' in kwargs:
+                index = kwargs['index'] - 1;
+            
+                if index > jumlah_data or index < 0:
+                    display([data[index]]);
+                    
+                else:
+                    display([data[index]]);
+                    return data[index];
+            
+            else:
+                display(data);
+
     except Exception as err:
         header();
         print(f'\n|{"---DATA KOSONG---":^48}|')
