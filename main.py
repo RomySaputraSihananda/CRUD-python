@@ -1,5 +1,5 @@
 from os import system
-from utils import menu, create, read, update, delete;
+from utils import menu, create, read, update, delete, footer;
 
 if(__name__ == '__main__'):
     while True:
@@ -22,5 +22,5 @@ if(__name__ == '__main__'):
         
         lanjut = input('\nLanjut Program : ');
         if((lanjut == 'n') or (lanjut == 'N')): break;
+    footer();
 
-    print('tq');

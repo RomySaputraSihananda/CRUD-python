@@ -37,33 +37,28 @@ def get_data(data):
     new_data['kelas'] = str(data[3]) + Database.TEMPLATE['kelas'][len(str(data[3])):];
     new_data['date'] = data[4];
     
-    # data['id'] = random_id(6);
-    # data['nama'] = nama + Database.TEMPLATE['nama'][len(nama):];
-    # data['jurusan'] = jurusan + Database.TEMPLATE['jurusan'][len(jurusan):];
-    # data['kelas'] = str(kelas) + Database.TEMPLATE['kelas'][len(str(kelas)):];
-    # data['date'] = time.strftime('%Y-%m-%d %H:%M:%S%z', time.gmtime());
-
-    # data_str = f'{data["id"]},{data["nama"]},{data["jurusan"]},{data["kelas"]},{data["date"]}\n';
-
-    # return data_str;
-
     while(True):
-        rubah = input('\napa yang dirubah : ');  
+        rubah = input('\nApa yang diUpdate : ');  
 
         match(rubah):
             case 'nama':
-                nama = input('\nNama : ');  
+                print('-' * 50);
+                nama = input('Nama : ');  
                 new_data['nama'] = nama + Database.TEMPLATE['nama'][len(nama):];
             case 'jurusan':
-                jurusan = input('\nJurusan : ');  
+                print('-' * 50);
+                jurusan = input('Jurusan : ');  
                 new_data['jurusan'] = jurusan + Database.TEMPLATE['jurusan'][len(jurusan):];
             case 'kelas':
-                kelas = int(input('\nKelas : '));  
+                print('-' * 50); 
+                kelas = int(input('Kelas : '));  
                 new_data['kelas'] = str(kelas) + Database.TEMPLATE['kelas'][len(str(kelas)):];
             case _:
                 print('gak ada......');
         
-        lanjut = input('\nLanjut Update : ');
+        print('-' * 50); 
+        lanjut = input('Lanjut Update : ');
+        print('-' * 50); 
         if((lanjut == 'n') or (lanjut == 'N')): break;
     
     return new_data;
